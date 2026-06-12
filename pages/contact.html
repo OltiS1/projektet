@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainKos - Kontakti</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-train"></i>
+                    <h1>Train<span>Kos</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Kryefaqja</a></li>
+                    <li><a href="lines.html"><i class="fas fa-route"></i> Linjat</a></li>
+                    <li><a href="stations.html"><i class="fas fa-map-marker-alt"></i> Stacionet</a></li>
+                    <li><a href="tickets.html"><i class="fas fa-ticket-alt"></i> Biletat</a></li>
+                    <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Kontakti</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">Na Kontaktoni</h2>
+            <!-- <p>Keni pyetje, sugjerime, ose keni nevojë për ndihmë? Na kontaktoni duke përdorur formularin më poshtë.</p> -->
+            
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefon</h3>
+                    <p>+383 44 123 456</p>
+                    <p>E hënë - E premte: 08:00 - 20:00</p>
+                    <p>Shtunë: 09:00 - 16:00</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@trainkos.com</p>
+                    <p>support@trainkos.com</p>
+                    <p>Përgjigjemi brenda 24 orëve</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Adresa</h3>
+                    <p>Rruga e Trenit, nr. 15</p>
+                    <p>10000 Prishtinë, Kosovë</p>
+                    <p>Hapur 24/7 për informata</p>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 64px; margin-top: 64px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="margin-bottom: 32px; color: var(--primary);">Dërgoni Mesazh</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Emri i Plotë *</label>
+                            <input type="text" id="name" name="name" required placeholder="Shkruani emrin tuaj">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Adresa Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="example@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Subjekti *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Zgjidhni subjektin</option>
+                                <option value="info">Informata</option>
+                                <option value="ticket">Problem me biletën</option>
+                                <option value="schedule">Orari i trenave</option>
+                                <option value="complaint">Ankesë</option>
+                                <option value="suggestion">Sugjerim</option>
+                                <option value="other">Tjetër</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Mesazhi *</label>
+                            <textarea id="message" name="message" required placeholder="Shkruani mesazhin tuaj këtu..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Dërgo Mesazhin
+                        </button>
+                        
+                        
+                    </form>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="margin-bottom: 32px; color: var(--primary);">Informacione të Shpejta</h3>
+                    
+                    <div class="info-box" style="margin-bottom: 32px;">
+                        <h4><i class="fas fa-question-circle"></i> Pyetjet e Shpeshta</h4>
+                        <ul>
+                            <li>Ku mund të blej bileta online?</li>
+                            <li>Si mund të marr zbritje si student?</li>
+                            <li>Cilat janë kushtet e refuzimit të biletës?</li>
+                            <li>A ekziston WiFi në tren?</li>
+                            <li>Si paraqes ankesë për vonesë?</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: var(--white); padding: 32px; border-radius: 8px; box-shadow: var(--shadow);">
+                        <h4><i class="fas fa-clock"></i> Orari i Shërbimit Klient</h4>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>E hënë - E premte:</td>
+                                <td><strong>08:00 - 20:00</strong></td>
+                            </tr>
+                            <tr>
+                                <td>E shtunë:</td>
+                                <td><strong>09:00 - 16:00</strong></td>
+                            </tr>
+                            <tr>
+                                <td>E diel:</td>
+                                <td><strong>10:00 - 14:00</strong></td>
+                            </tr>
+                        </table>
+                        <p style="margin-top: 16px; color: var(--gray);">
+                            <i class="fas fa-info-circle"></i> Në rast urgjence, telefononi numrin e emergjencës: 112
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TrainKos</h3>
+                    <p>Platforma e informimit për trenat në Kosovë</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Lidhje të Shpejta</h3>
+                    <ul>
+                        <li><a href="../index.html">Kryefaqja</a></li>
+                        <li><a href="lines.html">Linjat</a></li>
+                        <li><a href="contact.html">Kontakti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-phone"></i> +383 44 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@trainkos.com</p>
+                </div>
+            </div>
+            <p class="copyright">© 2026 TrainKos. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
