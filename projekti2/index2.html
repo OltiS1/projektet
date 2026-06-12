@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="Inside The $5 Billion Apple Headquarters.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header>
+        <h1>Teknike TECH</h1>
+        <ul>
+            <a href="index.html"><li>Samsung</li></a>
+            <a href="index2.html"><li>Apple</li></a>
+            
+          
+        </ul>
+    </header>
+    <div class="main-content">
+        <div class="left-ad">
+            <h4>Reklama</h4>
+            <p>Special Offer: 20% off on accessories!</p>
+            <a href="https://unblast.com/free-business-advertisement-flyer-template-psd/"><img src="image/adss.jpg" alt="Ad"></a>
+            <p>Special Offer: 20% off on accessories!</p>
+            <img src="https://img.freepik.com/free-vector/digital-marketing-agency-corporate-social-media-banner-instagram-post-template_1435-1951.jpg?semt=ais_hybrid&w=740&q=80" alt="Ad">
+        </div>
+        <div class="container">
+           <div class="phone" data-screen="6.7" data-ram="8GB" data-battery="4685mAh" data-camera="48MP">
+            <img src="image/ip17.jpg">
+            <h3>Iphone 17 Pro Max</h3> 
+            <p>Price: $1899</p>
+            <button class="buy-btn" >Buy Now</button>
+        </div>
+        <div class="phone" data-screen="6.1" data-ram="6GB" data-battery="3279mAh" data-camera="48MP">
+            <img src="image/ip177.jpg" >
+            <h3>Iphone 17</h3>
+            <p>Price: $799</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="phone" data-screen="6.3" data-ram="8GB" data-battery="3582mAh" data-camera="48MP">
+            <img src="image/ip166.jpg">
+            <h3>Iphone 16 Pro</h3>
+
+            <p>Price: $1299</p>
+            <button class="buy-btn" >Buy Now</button>
+        </div>
+        <div class="phone" data-screen="6.1" data-ram="6GB" data-battery="3561mAh" data-camera="48MP">
+            <img src="image/ip16n.jpg" >
+            <h3>Iphone 16</h3>
+            <p>Price: $699</p>
+            <button class="buy-btn" >Buy Now</button>
+        </div>
+        
+        
+        <div class="phone" data-screen="6.1" data-ram="6GB" data-battery="3349mAh" data-camera="48MP">
+            <img src="image/apple15.jpg">
+            <h3>iPhone 15</h3>
+            <p>Price: $599</p>
+            <button class="buy-btn" >Buy Now</button>
+        </div>
+
+         <div class="phone" data-screen="6.1" data-ram="6GB" data-battery="3279mAh" data-camera="12MP">
+            <img src="image/ip14.jpg">
+            <h3>iPhone 14</h3>
+            <p>Price: $499</p>
+            <button class="buy-btn" >Buy Now</button>
+        </div>
+        </div>
+        <div class="right-ad">
+            <h4>Reklama</h4>
+            <p>Special Offer: 20% off on accessories!</p>
+            <a href="https://unblast.com/free-business-advertisement-flyer-template-psd/"><img src="image/adss.jpg" alt="Ad"></a>
+            <p>Special Offer: 20% off on accessories!</p>
+           <a href="https://www.freepik.com/free-photos-vectors/social-media-ad"> <img src="https://img.freepik.com/free-vector/digital-marketing-agency-corporate-social-media-banner-instagram-post-template_1435-1951.jpg?semt=ais_hybrid&w=740&q=80" alt="Ad"></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Teknike TECH. All rights reserved.</p>
+        
+    </footer>
+
+    <div id="phoneModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="phoneTitle"></h2>
+            <img id="phoneImg" src="" alt="">
+            <p id="phoneSpecs"></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById('phoneModal');
+            var closeBtn = document.getElementsByClassName('close')[0];
+            closeBtn.onclick = function() {
+                modal.style.display = 'none';
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+            var phones = document.querySelectorAll('.phone');
+            phones.forEach(function(phone) {
+                phone.addEventListener('click', function() {
+                    var title = this.querySelector('h3').textContent;
+                    var imgSrc = this.querySelector('img').src;
+                    var screen = this.dataset.screen;
+                    var ram = this.dataset.ram;
+                    var battery = this.dataset.battery;
+                    var camera = this.dataset.camera;
+                    document.getElementById('phoneTitle').textContent = title;
+                    document.getElementById('phoneImg').src = imgSrc;
+                    document.getElementById('phoneSpecs').innerHTML = `<p>Screen: ${screen}</p><p>RAM: ${ram}</p><p>Battery: ${battery}</p><p>Camera: ${camera}</p>`;
+                    modal.style.display = 'block';
+                });
+            });
+            var buyBtns = document.querySelectorAll('.buy-btn');
+            buyBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    alert('Added to cart!');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
